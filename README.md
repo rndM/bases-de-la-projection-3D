@@ -128,7 +128,7 @@ La 3D peut sembler intimidante, mais elle repose sur des principes mathématique
 - **Trigonométrie** : Sinus et cosinus pour les rotations
 - **Perspective** : Division pour simuler la profondeur
 
-Ce code montre qu'avec moins de 100 lignes, on peut créer quelque chose de visuellement impressionnant !
+Ce code montre qu'avec une centaine de lignes, on peut créer quelque chose de visuellement impressionnant !
 
 ## 📝 Licence
 
