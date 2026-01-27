@@ -100,7 +100,7 @@ class Cube3D:
         
         La rotation autour de Y utilise la matrice :
         | cos(θ)   0   -sin(θ) |
-        |   0      1      0     |
+        |   0      1      0    |
         | sin(θ)   0    cos(θ) |
         
         Args:
