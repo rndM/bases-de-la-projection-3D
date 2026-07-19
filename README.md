@@ -1,143 +1,143 @@
-# 🎲 Cube 3D Rotatif - Apprendre la 3D simplement
+# 🎲 3D Rotating Cube - Learn 3D Simply
 
-Un projet pédagogique pour comprendre les **bases de la 3D** : rotation, projection et animation.
+A pedagogical project to understand the **basics of 3D**: rotation, projection and animation.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green)
 
-## 📖 À propos
+## 📖 About
 
-Ce programme affiche un cube en 3D qui tourne en continu. Il est conçu pour être **simple et éducatif**, montrant les concepts fondamentaux de la programmation 3D sans bibliothèque complexe.
+This program displays a 3D cube that rotates continuously. It is designed to be **simple and educational**, showing fundamental concepts of 3D programming without complex libraries.
 
-### Ce que vous allez apprendre
+### What you will learn
 
-- 🔄 **Rotation 3D** : Comment faire tourner des points dans l'espace
-- 📐 **Projection perspective** : Transformer des coordonnées 3D en 2D pour l'affichage
-- 🎬 **Animation** : Créer une animation fluide en rafraîchissant l'écran
+- 🔄 **3D Rotation**: How to rotate points in space
+- 📐 **Perspective projection**: Transforming 3D coordinates into 2D for display
+- 🎬 **Animation**: Creating smooth animation by refreshing the screen
 
-## 🚀 Lancement rapide
+## 🚀 Quick Start
 
-### Prérequis
+### Prerequisites
 
 - Python 3.x
-- Tkinter (inclus par défaut avec Python)
+- Tkinter (included by default with Python)
 
-### Exécution
+### Running
 
 ```bash
 python test3D.py
 ```
 
-Une fenêtre s'ouvre avec un cube vert qui tourne sur fond noir.
+A window opens with a green cube rotating on a black background.
 
-## 🧠 Concepts expliqués
+## 🧠 Concepts Explained
 
-### 1. Représentation du cube
+### 1. Cube Representation
 
-Le cube est défini par :
-- **8 coins** (sommets) en coordonnées 3D `(x, y, z)`
-- **12 arêtes** (lignes) reliant ces coins
+The cube is defined by:
+- **8 corners** (vertices) in 3D coordinates `(x, y, z)`
+- **12 edges** (lines) connecting these corners
 
 ```python
-# Exemple : coin avant-gauche-bas
+# Example: front-bottom-left corner
 (-1, -1, -1)
 #  x   y   z
 ```
 
-### 2. Rotation 3D
+### 2. 3D Rotation
 
-La rotation autour de l'axe Y utilise une **matrice de rotation** :
+Rotation around the Y axis uses a **rotation matrix**:
 
 ```
 x' = x × cos(θ) - z × sin(θ)
 z' = x × sin(θ) + z × cos(θ)
-y' = y  (pas de changement)
+y' = y  (no change)
 ```
 
-Cela fait "tourner" le cube comme une toupie.
+This makes the cube spin like a top.
 
-### 3. Projection perspective
+### 3. Perspective Projection
 
-Pour afficher la 3D sur un écran 2D, on utilise la **division par la profondeur** :
+To display 3D on a 2D screen, we use **division by depth**:
 
 ```
-x_écran = x / z
-y_écran = y / z
+x_screen = x / z
+y_screen = y / z
 ```
 
-Plus un objet est loin (z grand), plus il apparaît petit. C'est comme regarder par une fenêtre !
+The farther an object is (large z), the smaller it appears. It's like looking through a window!
 
 ### 4. Animation
 
-Le cube est redessiné toutes les **16 millisecondes** (~60 images/seconde) :
-1. Effacer l'écran
-2. Calculer les nouvelles positions (rotation)
-3. Dessiner les arêtes
-4. Incrémenter l'angle
-5. Répéter
+The cube is redrawn every **16 milliseconds** (~60 frames/second):
+1. Clear the screen
+2. Calculate new positions (rotation)
+3. Draw edges
+4. Increment angle
+5. Repeat
 
-## 📁 Structure du code
+## 📁 Code Structure
 
 ```
 test3D.py
-├── Configuration (couleurs, taille)
-├── Classe Cube3D
-│   ├── __init__()      → Initialise la fenêtre et les données
-│   ├── tourner()       → Applique la rotation 3D
-│   ├── projeter()      → Convertit 3D → 2D
-│   ├── animer()        → Boucle d'animation
-│   └── demarrer()      → Lance l'application
-└── Programme principal
+├── Configuration (colors, size)
+├── Cube3D Class
+│   ├── __init__()      → Initialize window and data
+│   ├── tourner()       → Apply 3D rotation
+│   ├── projeter()      → Convert 3D → 2D
+│   ├── animer()        → Animation loop
+│   └── demarrer()      → Launch application
+└── Main program
 ```
 
-## 🎨 Personnalisation
+## 🎨 Customization
 
-Vous pouvez modifier facilement :
+You can easily modify:
 
 ```python
-# Taille de la fenêtre
+# Window size
 LARGEUR = 800
 HAUTEUR = 800
 
-# Couleurs
-COULEUR_FOND = "#101010"    # Fond noir
-COULEUR_LIGNE = "#50FF50"   # Lignes vertes
+# Colors
+COULEUR_FOND = "#101010"    # Black background
+COULEUR_LIGNE = "#50FF50"   # Green lines
 
-# Vitesse de rotation (dans animer())
-self.angle += 0.05  # Plus grand = plus rapide
+# Rotation speed (in animer())
+self.angle += 0.05  # Larger = faster
 ```
 
-## 🔧 Exercices pour aller plus loin
+## 🔧 Further Exercises
 
-1. **Ajouter une rotation sur l'axe X** : Faire tourner le cube sur deux axes
-2. **Changer les couleurs** : Colorer différemment chaque face
-3. **Ajouter des contrôles** : Utiliser le clavier pour contrôler la rotation
-4. **Dessiner d'autres formes** : Pyramide, tétraèdre, etc.
-5. **Ajouter de la profondeur** : Assombrir les arêtes lointaines
+1. **Add X-axis rotation**: Make the cube rotate on two axes
+2. **Change colors**: Color each face differently
+3. **Add controls**: Use the keyboard to control rotation
+4. **Draw other shapes**: Pyramid, tetrahedron, etc.
+5. **Add depth**: Darken distant edges
 
-## 📚 Ressources pour approfondir
+## 📚 Resources to Go Further
 
-- [Mathématiques de la 3D](https://fr.wikipedia.org/wiki/Rotation_dans_l%27espace) - Matrices de rotation
-- [Projection perspective](https://fr.wikipedia.org/wiki/Perspective_(repr%C3%A9sentation)) - Théorie
-- [Tkinter Canvas](https://docs.python.org/fr/3/library/tkinter.html#tkinter.Canvas) - Documentation
+- [3D Mathematics](https://en.wikipedia.org/wiki/Rotation_matrix) - Rotation matrices
+- [Perspective projection](https://en.wikipedia.org/wiki/Perspective_(graphical)) - Theory
+- [Tkinter Canvas](https://docs.python.org/3/library/tkinter.html#tkinter.Canvas) - Documentation
 
-## 💡 Pourquoi ce projet ?
+## 💡 Why This Project?
 
-La 3D peut sembler intimidante, mais elle repose sur des principes mathématiques simples :
-- **Géométrie** : Des points et des lignes
-- **Trigonométrie** : Sinus et cosinus pour les rotations
-- **Perspective** : Division pour simuler la profondeur
+3D may seem intimidating, but it relies on simple mathematical principles:
+- **Geometry**: Points and lines
+- **Trigonometry**: Sine and cosine for rotations
+- **Perspective**: Division to simulate depth
 
-Ce code montre qu'avec une centaine de lignes, on peut créer quelque chose de visuellement impressionnant !
+This code shows that with a hundred lines, you can create something visually impressive!
 
-## 📝 Licence
+## 📝 License
 
-Code libre d'utilisation pour l'apprentissage et l'enseignement.
+Code free to use for learning and teaching.
 
 ## 🤖 Contributions
 
-Ce README et les commentaires détaillés du code ont été rédigés avec l'aide d'une IA LLM (Large Language Model) pour rendre le projet plus accessible et pédagogique.
+This README and the detailed code comments were written with the help of an AI LLM (Large Language Model) to make the project more accessible and educational.
 
 ---
 
-**Bon apprentissage de la 3D ! 🎓**
+**Happy learning 3D! 🎓**
