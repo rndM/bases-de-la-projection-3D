@@ -8,10 +8,9 @@
 
 ---
 
-Un projet pédagogique pour comprendre les **bases de la 3D** : rotation, projection et animation.
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green) ![Licence](https://img.shields.io/badge/Licence-MIT-green)
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green)
+Un projet pédagogique pour comprendre les **bases de la 3D** : rotation, projection et animation.
 
 ## 📖 À propos
 

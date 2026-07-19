@@ -8,10 +8,9 @@
 
 ---
 
-A pedagogical project to understand the **basics of 3D**: rotation, projection and animation.
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green) ![License](https://img.shields.io/badge/License-MIT-green)
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green)
+A pedagogical project to understand the **basics of 3D**: rotation, projection and animation.
 
 ## 📖 About
 
