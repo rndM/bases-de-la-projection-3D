@@ -1,5 +1,13 @@
 # 🎲 Cube 3D Rotatif - Apprendre la 3D simplement
 
+---
+
+## 📚 Navigation
+
+**[English Version](README.md)** | **[Version Française](README_FR.md)**
+
+---
+
 Un projet pédagogique pour comprendre les **bases de la 3D** : rotation, projection et animation.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
